@@ -1,0 +1,224 @@
+.results-page {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-page.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.results-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.score-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.score-item {
+  text-align: center;
+}
+
+.score-item p:first-child {
+  font-weight: bold;
+}
+
+.score-item p:last-child {
+  font-size: 1.2rem;
+}
+
+/* Centering the pie chart */
+.pie-chart {
+  max-width: 400px;
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centering the score overlay inside the pie chart */
+.score-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: inherit; /* Ensures color adapts to light or dark mode */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.score-details {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.answers-list {
+  text-align: left;
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.prev-button, .next-button {
+  flex: 1;
+  height: 50px;
+  margin-right: 10px;
+  color: grey;
+}
+
+.background {
+  color: white;
+}
+
+.light-mode .results-page {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.light-mode .pie-chart {
+  background-color: #fff;
+}
+
+.light-mode .score-overlay {
+  color: #333;
+}
+
+.light-mode .button-group button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.light-mode .prev-button {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.light-mode .prev-button:hover {
+  background-color: #c0c0c0;
+}
+
+.light-mode .next-button {
+  background-color: #a0a0a0;
+}
+
+.light-mode .next-button:hover {
+  background-color: #808080;
+}
+
+.light-mode .score-details {
+  color: #333;
+}
+
+.light-mode .answers-list {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.dark .results-page {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .score-overlay {
+  color: #fff;
+}
+
+.dark .button-group button {
+  background-color: yellow;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.dark .prev-button, .dark .next-button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+}
+
+.dark .prev-button:hover, .dark .next-button:hover {
+  background-color: #FFCC00;
+}
+
+.dark-mode .button-group button {
+  background-color: #d8ef7c;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.dark-mode .prev-button, .dark-mode .next-button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+}
+
+.dark .prev-button:hover, .dark .next-button:hover {
+  background-color: #FFCC00;
+}
+
+.dark .score-details {
+  color: #fff;
+}
+
+.dark .answers-list {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.light-mode .button-group button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.light-mode .prev-button {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.light-mode .prev-button:hover {
+  background-color: #c0c0c0;
+}
+
+.light-mode .next-button {
+  background-color: #a0a0a0;
+}
+
+.light-mode .next-button:hover {
+  background-color: #808080;
+}
+
+.dark .answers-list p {
+  color: #000;
+}
+
+.navbar {
+  display: none;
+}

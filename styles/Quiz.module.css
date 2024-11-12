@@ -1,0 +1,254 @@
+/* Quiz.module.css */
+
+.quiz-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  /* Ensure it takes the full height of the page */
+  }
+  
+  .set-options {
+    margin-bottom: 20px;
+  }
+  
+  .set-options button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .set-options button:hover {
+    background-color: #0056b3;
+  }
+  
+  .start-screen {
+    text-align: center;
+    padding: 50px;
+    background-color: #e8f4f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .start-screen h1 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .start-screen p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .start-screen button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .start-screen button:hover {
+    background-color: #218838;
+  }
+  
+  .question-card {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;  /* Allow the question card to take the remaining space */
+  }
+  
+  .question-card h2 {
+    font-size: 24px;
+    color: black;  /* Set color to black */
+  }
+  
+  .question-card p {
+    font-size: 18px;
+    color: black;  /* Set color to black */
+    margin-bottom: 15px;
+  }
+  
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    padding: 12px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .option:hover {
+    background-color: #ddd;
+  }
+  
+  .option.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .prev-button, .next-button {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .prev-button {
+    background-color: #d3d3d3;
+    color: black;
+  }
+  
+  .prev-button:hover {
+    background-color: #c0c0c0;
+  }
+  
+  .next-button {
+    background-color: #a0a0a0;
+    color: white;
+  }
+  
+  .next-button:hover {
+    background-color: #808080;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
+  .results-card {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results-card h2 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .results-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .result-box {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+  }
+  
+  .correct {
+    background-color: #28a745;
+  }
+  
+  .incorrect {
+    background-color: #dc3545;
+  }
+  
+  .unattempted {
+    background-color: #ffc107;
+  }
+  
+  .answers-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .answers-list li {
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .answers-list li p {
+    margin: 5px 0;
+  }
+  
+  /* Dark Mode */
+  .dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark .quiz-container {
+    background-color: #1e1e1e;
+  }
+  
+  .dark .start-screen {
+    background-color: #2c2c2c;
+  }
+  
+  .dark .question-card {
+    background-color: #2c2c2c;
+  }
+  
+  .dark .option.selected {
+    background-color: #4e73df;
+  }
+  
+  .dark .controls button {
+    background-color: #4e73df;
+  }
+  
+  .dark .controls button:hover {
+    background-color: #2d56b4;
+  }
+  
+  .dark .results-card {
+    background-color: #2c2c2c;
+  }
+  
+  .dark .result-box.correct {
+    background-color: #28a745;
+  }
+  
+  .dark .result-box.incorrect {
+    background-color: #dc3545;
+  }
+  
+  .dark .result-box.unattempted {
+    background-color: #ffc107;
+  }
+  

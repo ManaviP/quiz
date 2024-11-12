@@ -1,0 +1,369 @@
+/* styles/globals.css */
+@import 'next-themes/theme.css';
+
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  color: #202020;
+}
+
+/* Light/Dark Mode Styling */
+[data-theme="light"] {
+  background-color: #ffffff;
+  color: #202020;
+}
+
+[data-theme="dark"] {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+/* Global Dark Mode and Light Mode Styling */
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+/* General Styles for Results Page */
+.results-page.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.results-page.light-mode {
+  background-color: #fff;
+  color: black;
+}
+
+/* Navbar Styling */
+.navbar-light, .navbar-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.navbar-light {
+  background-color: black;
+  color: white;
+}
+
+.navbar-dark {
+  background-color: yellow;
+  color: black;
+}
+
+/* Navbar Brand and Links */
+.navbar-light .brand, .navbar-dark .brand {
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+}
+
+.navbar-light .navLinks, .navbar-dark .navLinks {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.navbar-light .link, .navbar-dark .link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-light .toggleButton, .navbar-dark .toggleButton {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+/* Button Styles */
+.controls button {
+  background-color: #0f81c7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* Quiz Styling */
+.quiz-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer-box {
+  background-color: red;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.question-card, .results-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option.selected {
+  background-color: #0f81c7;
+  color: white;
+  border-color: #0f81c7;
+}
+
+/* Results Summary Styling */
+.results-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.result-box {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
+.unattempted {
+  background-color: yellow;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timer-box {
+    font-size: 14px;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+
+  .option {
+    padding: 12px;
+  }
+
+  .controls button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .results-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-box {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .start-screen h1 {
+    font-size: 2rem;
+  }
+
+  .start-screen button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer-box {
+    font-size: 12px;
+  }
+
+  .options {
+    gap: 8px;
+  }
+
+  .option {
+    padding: 10px;
+  }
+
+  .controls button {
+    padding: 10px;
+  }
+
+  .results-summary {
+    gap: 10px;
+  }
+
+  .start-screen h1 {
+    font-size: 1.5rem;
+  }
+
+  .start-screen button {
+    padding: 12px 20px;
+  }
+}
+
+/* Start Screen Styling */
+.start-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.start-screen h1 {
+  font-size: 3rem;
+}
+
+.start-screen button {
+  background-color: #0f81c7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.start-screen button:hover {
+  background-color: #0080c7;
+}
+
+/* Prev Button Styling */
+.prev-button {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.prev-button:hover {
+  background-color: #c0c0c0;
+}
+
+/* Next Button Styling */
+.next-button {
+  background-color: #a0a0a0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.next-button:hover {
+  background-color: #808080;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background-color: #0f81c7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+  background-color: #0080c7;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Light/Dark Toggle Styling */
+.light-dark-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.light-dark-toggle:hover {
+  background-color: #555;
+}
